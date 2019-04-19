@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css?family=Robato");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Robato", sans-serif;
+  line-height: 1.4;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/*  ---------Utility Classes */
+/*.container {*/
+/*  max-width: 1100px;*/
+/*  margin: auto;*/
+/*  padding: 0 2rem;*/
+/*  overflow: hidden;*/
+/*}*/
+
+
+
+.bttn {
+  display: inline-block;
+  color: #000;
+  transition: 0.7s all ease-in-out;
+  padding: 0.5rem 2rem;
+  border: 1px solid rgb(139, 9, 111);;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: rgb(139, 9, 111);
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+/* Navbar */
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  color: #fff;
+  z-index: 1;
+  padding: 0.8rem 1rem;
+}
+
+.nav label,
+.nav input {
+  display: none;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: rgb(139, 9, 111);
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#navbar ul li a:hover {
+  border-bottom: 2px solid rgb(139, 9, 111);
+}
+
+/* Showcase / Header */
+
+#showcase {
+  background: #333 url("../showcase1.jpg") no-repeat center center/cover;
+  height: 70vh;
+  color: white;
+}
+
+#showcase .showcase-content {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 20px;
+}
+
+.showcase-content .show-container {
+  width: 40%;
+  padding: 30px;
+}
+
+/*------------------------------------ Lucas Section */
+
+.btn-products {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    border-radius: 0px;
+}
+
+
+.jumbotron {
+    background-image: url(../../slider-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 24em;
+    padding-top: 9em;
+    padding-bottom: 9em;
+}
+
+.card {
+    width: 100%;
+    height:auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.hplants-showcase {
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+/*------------------------------------ Kaido */
+/*------------------------------------ Footer Main */
+
+.footer-main {
+    text-align: left;
+    background: #F5F5F3;
+    padding-top: 7em;
+    padding-bottom: 7em;
+    padding-left: 4em;
+}
+
+/*------------------------------------ Footer Social */
+
+.socialcontainer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 319px;
+    height: 86px;
+    margin-bottom: 13px;
+    border-radius: 5px;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.social-links li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.social-links li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000;
+    transition: .5s;
+}
+
+.social-links li a i {
+    font-size: 40px;
+    position: relative;
+    padding-top: 20px;
+}
+
+/*------------------------------------ Footer Social Hover */
+
+.social-links li a:hover {
+    color: #fff
+}
+
+.social-links li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s cubic-bezier(.95, .32, .37, 1.31);
+}
+
+.social-links li a:hover:before {
+    transform: scale(1);
+}
+
+.social-links li:nth-child(1) a:hover:before {
+    background: #3b5999;
+}
+
+.social-links li:nth-child(2) a:hover:before {
+    background: #1EA1F3;
+}
+
+.social-links li:nth-child(3) a:hover:before {
+    background: #D12D90;
+}
+
+/*------------------------------------ Kaido End */
+
+/* media queries */
+
+@media (max-width: 768px) {
+  #navbar {
+    background-color: transparent;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0;
+  }
+
+  #navbar .logo {
+    display: none;
+  }
+
+  #navbar ul {
+    display: none;
+    background-color: rgb(139, 9, 111);
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  #toggle:checked + #menu {
+    display: flex;
+  }
+
+  #navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #navbar ul li a {
+    display: block;
+    color: #fff;
+    border-bottom: 1px dotted #c9ccce;
+    font-size: 1rem;
+  }
+
+  .nav {
+    position: sticky;
+    height: 40px;
+    background-color: rgb(139, 9, 111);
+  }
+
+  .nav label,
+  .nav input {
+    float: right;
+  }
+
+  .nav label {
+    display: block;
+    margin: 10px 20px 0 10px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .container {
+    padding: 0;
+  }
+  
+  .showcase-content {
+    width: 100%;
+    justify-content: center;
+  align-items: center;
+  }
+  .showcase-content .show-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: none;
+  }
+
