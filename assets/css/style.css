@@ -96,7 +96,8 @@ p {
 /* Showcase / Header */
 
 #showcase {
-  background: #333 url("../showcase1.jpg") no-repeat center center/cover;
+  background: #333 url("showcase1.jpg") no-repeat center center/cover;
+  background-image: url(../../showcase1.jpg);
   height: 70vh;
   color: white;
 }
